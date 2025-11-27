@@ -15,20 +15,5 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import axios from 'axios'
 
-  const ime = ref('')
-  //let ispis = ref('')
-
-  async function posalji() {
-    let data = {'ime': ime.value }
-    await axios.post('http://localhost:3000/api/ime', data)
-    .then(result => {
-      console.log(result.data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }
 </script>
